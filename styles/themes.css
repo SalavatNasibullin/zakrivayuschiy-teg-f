@@ -11,6 +11,7 @@
     --fill-color: #ff0000;
     --font-weight-card: 400;
     --font-weight-card-header: 700;
+    --accent: #fff;
 }
 
 :root.theme-dark {
@@ -26,6 +27,9 @@
     --pseudo-element-color: #00cc14;
     --contour-color: #00cc14;
     --fill-color: #ff0000;
+    --accent-color: #00cc14;
+    --fill: #00cc14;
+    --accent: #00cc14;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -42,22 +46,10 @@
         --fill-color: #ff0000;
         --font-weight-card: 465;
         --font-weight-card-header: 785;
+        
     }
 }
 
-@media (prefers-color-scheme: light) {
-    :root {
-        --background-color: #ffffff;
-        --font-color: #000000;
-        --vertical-stripes: repeating-linear-gradient(90deg, #d3d3d3 0%, #d3d3d3 2px, transparent 2px, transparent 4px);
-        --horizontal-stripes: repeating-linear-gradient(0deg, #d3d3d3 0%, #d3d3d3 2px, transparent 2px, transparent 4px);
-        --background-base-gradient: linear-gradient(0deg, #1a1a1a 0%, #e7e7e7 100%);
-        --label-shadow-color: rgba(255, 255, 255, 0.5);
-        --blend-mode-text-color: #ffffff;
-        --pseudo-element-color: #000000;
-        --contour-color: #000000;
-        --fill-color: #ff0000;
-        --font-weight-card: 400;
-        --font-weight-card-header: 700;
-    }
+fill: var(--accent, #00cc14);
+    stroke: var(--accent, #00cc14);
 }

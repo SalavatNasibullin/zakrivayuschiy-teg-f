@@ -3,10 +3,6 @@
       left: -17px;
   }
 
-  to {
-      left: -21px;
-  }
-}
 
 @keyframes scaleHeart {
   50% {
