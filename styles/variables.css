@@ -1,17 +1,15 @@
 :root {
-    --primary-font: "Inter", sans-serif;
-    --font-accent: "PressStart2P";
-    --font-weight-card: 400;
-    --font-weight-card-header: 700;
-    --background-color: #ffffff;
-    --font-color: #000000;
-    --vertical-stripes: repeating-linear-gradient(90deg, #d3d3d3 0%, #d3d3d3 2px, transparent 2px, transparent 4px);
-    --horizontal-stripes: repeating-linear-gradient(0deg, #d3d3d3 0%, #d3d3d3 2px, transparent 2px, transparent 4px);
-    --background-base-gradient: linear-gradient(0deg, #1a1a1a 0%, #e7e7e7 100%);
-    --header-inline-size: clamp(375px, calc(375px + 0.3052 * (100vw - 375px)), 700px);
-    --label-shadow-color: rgba(255, 255, 255, 0.5);
-    --blend-mode-text-color: #ffffff;
-    --pseudo-element-color: #000000;
-    --contour-color: #000000;
-    --fill-color: #ff0000;
+  --main-font: "Inter-Variable";
+  --accent-font: "PressStart2P";
+  --card-text-weight: 400;
+  --card-title-weight: 700;
+  --bg-color: #fff;
+  --accent-color: #000;
+  --brand-gradient-color: #d3d3d3;
+  --accent-gradient-color: #e7e7e7;
+  --secondary-gradient-color: #1a1a1a;
+  --contour-color: #000;
+  --sparks-color: #f00;
+  --button-text: #fff;
+  --backdrop-color: #000;
 }

@@ -1,23 +1,29 @@
-@keyframes arrowAnimation {
+@keyframes arrow-animation {
   from {
       left: -17px;
   }
 
-
-@keyframes scaleHeart {
-  50% {
-      transform: scale(1.5);
-  }
-  100% {
-      transform: scale(1);
+  to {
+      left: -21px;
   }
 }
 
-@keyframes sparkAnimation {
-  50% {
-      opacity: 1;
+@keyframes heart-scale {
+  from {
+      scale: 1;
   }
-  100% {
+
+  to {
+      scale: 1.5;
+  }
+}
+
+@keyframes sparks {
+  from {
       opacity: 0;
+  }
+
+  to {
+      opacity: 1;
   }
 }
