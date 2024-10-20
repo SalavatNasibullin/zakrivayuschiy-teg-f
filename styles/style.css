@@ -26,7 +26,6 @@
   padding-block-start: clamp(120px, calc(120px + 0.015 * (100vw - 375px)), 136px);
   border: 2px solid currentColor;
   background-color: var(--background-color);
-  gap: 25px;
   font-family: var(--accent-font, system-ui), system-ui;
 }
 
@@ -46,7 +45,7 @@
   line-height: normal;
   text-align: center;
   text-decoration: none;
-  margin: -5px;
+  padding-block-end: 20px;
 }
 
 .header__title {
@@ -58,6 +57,7 @@
   font-style: normal;
   line-height: normal;
   text-align: center;
+  padding-block-end: 25px;
 }
 
 .header__theme-menu {
@@ -97,18 +97,6 @@
   animation: arrowAnimation 0.5s ease-in-out infinite alternate;
 }
 
-.theme-menu__button::after {
-  content: "";
-  position: absolute;
-  display: block;
-  left: 0;
-  top: 15px;
-  width: 0;
-  height: 3px;
-  transition: width 300ms;
-  background-color: var(--font-color);
-}
-
 .theme-menu__button:focus-visible::after {
   width: 100%;
 }
@@ -126,7 +114,6 @@
 .theme-menu__button:focus {
   outline: none;
   opacity: 0.6;
-  transition: opacity 0.3s ease;
 }
 
 .theme-menu__button:hover::after,
@@ -188,19 +175,15 @@
   color: var(--font-color);
   top: 25px;
   right: 11px;
-  text-shadow:
-  -1px -1px 0 var(--button--color-second),
-  1px -1px 0 var(--button--color-second),
-  -1px 1px 0 var(--button--color-second),
-  1px 1px 0 var(--button--color-second);
+  text-shadow: -1px -1px 0 var(--button--color-second), 1px -1px 0 var(--button--color-second), -1px 1px 0 var(--button--color-second), 1px 1px 0 var(--button--color-second);
   opacity: 0.5;
 }
 
-@supports((text-stroke: 1px var(--button-color-second)) or (-webkit-text-stroke: 1px var(--button-color-second))) {
+@supports ((text-stroke: 1px var(--button-color-second)) or (-webkit-text-stroke: 1px var(--button-color-second))) {
   .card__image-label {
-    -webkit-text-stroke: 1px var(--button-color-second);
-    text-stroke: 1px var(--button-color-second);
-    text-shadow: none;
+      -webkit-text-stroke: 1px var(--button-color-second);
+      text-stroke: 1px var(--button-color-second);
+      text-shadow: none;
   }
 }
 
@@ -218,7 +201,7 @@
   font-family: var(--font-primary, sans-serif), sans-serif;
   color: var(--font-color);
   line-height: 116.667%;
-  font-variation-settings: "wght" var(--font-weight-card);
+  font-family: var(--mainFont, sans-serif);
 }
 
 .card__button-wrapper {
@@ -243,6 +226,7 @@
   border: var(--border-size, 2px) solid transparent;
   max-height: 38px;
   max-width: 38px;
+  justify-content: center;
 }
 
 .sparks {
@@ -286,9 +270,8 @@
 }
 
 .contour {
-  transition: fill 0.3s 0.03s linear;
+  transition: fill 0.1s linear;
 }
-
 
 .like-icon:active .core {
   fill: var(--fill-color);
@@ -359,6 +342,7 @@
   background-color: var(--background-color);
   border: 2px solid var(--font-color);
   gap: 8px;
+  transition: transform 0.5s ease-in-out;
 }
 
 .save-button__text {
@@ -393,19 +377,13 @@ button:focus-visible {
   transform: translateX(-100%);
   z-index: 1;
   transition: transform 0.5s ease-in-out;
-  background-color: var(--pseudo-element-color);
+  mix-blend-mode: difference;
+  background-color: var(--button-mix-blend);
 }
-
 
 .modal-dialog[open] {
   max-width: 357px;
-  min-height: 193px;
   padding: 31px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 25px;
   background-color: var(--background-color);
   border: 2px solid var(--font-color);
 }
@@ -435,13 +413,10 @@ button:focus-visible {
   font-weight: var(--font-weight-card);
   line-height: 150%;
   text-transform: uppercase;
-  max-inline-size: 234px;
 }
 
 .dialog__svg-icon {
   color: var(--font-color);
-  block-size: 39px;
-  inline-size: 39px;
   fill: var(--accent, #00cc14);
   mix-blend-mode: difference;
 }
@@ -513,9 +488,8 @@ button:focus-visible {
       width: 21px;
       height: 21px;
       margin-block-end: 0;
-      margin-inline-end: 8px;
+      margin-inline-end: 2px;
   }
-  
 }
 
 @media screen and (min-width: 376px) {
@@ -525,19 +499,14 @@ button:focus-visible {
       block-size: 51px;
       margin-block-end: 105px;
   }
-
-.dialog__svg-icon {
-block-size: 99px;
-inline-size: 39px;
-}
 }
 
 @media (width: 375px) {
-.dialog__svg-icon { 
-    width: 28px;
-    height: 28px;
-    margin-block-end: 8px;
-}
+  .dialog__svg-icon-small {
+      width: 28px;
+      height: 28px;
+      margin-block-end: 8px;
+  }
 }
 
 .button-pseudo:hover::before {
@@ -550,9 +519,43 @@ inline-size: 39px;
   }
 }
 
-@media (width >= 375px) {
-  .dialog__svg-icon {   
-      block-size: 28px;
-      inline-size: 28px;
+.dialog__wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  align-items: center;
+  justify-content: center;
+}
+
+@media (width <= 409px) {
+  .modal &.dialog[open] {
+      max-width: 336px;
+  }
+}
+
+.dialog__svg-icon-small {
+  width: 20px;
+  height: 20px;
+}
+
+.dialog__svg-icon-large {
+  max-width: 39px;
+  height: auto;
+}
+
+@media (width <= 409px) {
+  .button {
+      gap: 8px;
+  }
+  .dialog__svg-icon-small {
+      width: 28px;
+      height: 28px;
+  }
+}
+
+@media (width <= 409px) {
+  .modal-dialog[open] {
+      max-width: 336px;
+      padding: 40px;
   }
 }

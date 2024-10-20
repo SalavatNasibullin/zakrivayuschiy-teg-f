@@ -1,5 +1,6 @@
 :root {
     --primary-font: "Inter", sans-serif;
+    --mainFont: "Inter";
     --font-accent: "PressStart2P";
     --font-weight-card: 400;
     --font-weight-card-header: 700;
@@ -14,4 +15,7 @@
     --pseudo-element-color: #000000;
     --contour-color: #000000;
     --fill-color: #ff0000;
+    --accent: #fff;
+    --button-color-second: #fff;
+    --backdrop-color: #000;
 }

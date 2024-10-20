@@ -2,12 +2,11 @@
   from {
       left: -17px;
   }
-  
-  100% {
-    left: -21px;
-}
-}
 
+  to {
+      left: -21px;
+  }
+}
 
 @keyframes scaleHeart {
   50% {
@@ -26,4 +25,3 @@
       opacity: 0;
   }
 }
-

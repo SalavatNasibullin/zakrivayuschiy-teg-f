@@ -13,6 +13,8 @@
     --font-weight-card-header: 700;
     --accent: #fff;
     --backdrop-color: #000;
+    --button-color-second: #fff;
+    --button-mix-blend: #fff;
 }
 
 :root.theme-dark {
@@ -25,13 +27,15 @@
     --background-base-gradient: linear-gradient(0deg, #004306 0%, #007f0c 100%);
     --label-shadow-color: rgba(0, 0, 0, 0.5);
     --blend-mode-text-color: #00cc14;
-    --pseudo-element-color: #00cc14;
     --contour-color: #00cc14;
     --fill-color: #ff0000;
     --accent-color: #00cc14;
     --fill: #00cc14;
     --accent: #00cc14;
     --backdrop-color: #000;
+    --pseudo-element-color: #00cc14;
+    --button-mix-blend: #00cc14;
+    --button-color-second: #000;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -48,10 +52,5 @@
         --fill-color: #ff0000;
         --font-weight-card: 465;
         --font-weight-card-header: 785;
-        
     }
-}
-
-fill: var(--accent, #00cc14);
-    stroke: var(--accent, #00cc14);
 }

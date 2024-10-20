@@ -18,7 +18,7 @@
     </head>
     <body class="page">
         <header class="header general__content">
-            <a href="#0" class="header__description">&lt;/Html&gt;</a>
+            <a class="header__description">&lt;/Html&gt;</a>
             <h1 class="header__title">закрывающий тег</h1>
             <nav class="theme-menu header__theme-menu">
                 <ul class="theme-menu__list">
@@ -349,15 +349,16 @@
                 </li>
             </ul>
             <button type="button" class="save-button button button-pseudo" onclick="document.getElementById('modal').showModal();" aria-controls="modal">
-                <svg class="dialog__svg-icon" viewBox="0 0 39 39" aria-hidden="true">
+                <svg class="dialog__svg-icon dialog__svg-icon-small" viewBox="0 0 39 39" aria-hidden="true">
                     <use href="./images/svg/floppy.svg#floppy"></use>
                 </svg>
                 <span class="save-button__text button__text">Сохранить на память</span>
             </button>
         </main>
         <dialog id="modal" class="modal-dialog">
+            <div class="dialog__wrapper">
             <div class="modal-content">
-                <svg class="dialog__svg-icon" viewBox="0 0 39 39" aria-hidden="true">
+                <svg class="dialog__svg-icon  dialog__svg-icon-large " viewBox="0 0 40 40" aria-hidden="true">
                     <use href="./images/svg/floppy.svg#floppy"></use>
                 </svg>
                 <p class="modal-dialog__instruction">Вставьте дискету, чтобы продолжить</p>
