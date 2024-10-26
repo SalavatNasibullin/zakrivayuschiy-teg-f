@@ -35,7 +35,7 @@
     --backdrop-color: #000;
     --pseudo-element-color: #00cc14;
     --button-mix-blend: #00cc14;
-    --button-color-second: #000;
+    --button-color-second: #00;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -52,5 +52,7 @@
         --fill-color: #ff0000;
         --font-weight-card: 465;
         --font-weight-card-header: 785;
+        --accent: #00cc14;
+        --button-color-second: #00;
     }
 }
