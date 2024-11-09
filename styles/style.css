@@ -109,7 +109,6 @@
   animation: moving 0.5s ease-in-out infinite alternate;
 }
 
-
 .theme-menu__button:focus-visible::before {
   transform: scaleX(1);
 }
@@ -131,7 +130,6 @@
   opacity: 0.6;
   outline: transparent;
 }
-
 
 .card-list {
   display: flex;
@@ -191,11 +189,11 @@
   opacity: 0.5;
 }
 
-@supports ( (--text-stroke: 1px var(--text-shadow, #fff)) or (-webkit-text-stroke: 1px var(--text-shadow, #fff)) ) {
+@supports ((--text-stroke: 1px var(--text-shadow, #fff)) or (-webkit-text-stroke: 1px var(--text-shadow, #fff))) {
   .card__image-label {
-    -webkit-text-stroke: 1px var(--text-shadow, #fff);
-    --text-stroke: 1px var(--text-shadow, #fff);
-    text-shadow: none;
+      -webkit-text-stroke: 1px var(--text-shadow, #fff);
+      --text-stroke: 1px var(--text-shadow, #fff);
+      text-shadow: none;
   }
 }
 
@@ -559,7 +557,7 @@
   .card__image-label {
       top: 23px;
       right: 12px;
-}
+  }
 }
 
 @media (width <= 409px) {
