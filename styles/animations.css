@@ -1,13 +1,3 @@
-@keyframes arrowAnimation {
-  from {
-      left: -17px;
-  }
-
-  to {
-      left: -21px;
-  }
-}
-
 @keyframes scaleHeart {
   50% {
       transform: scale(1.5);
@@ -25,3 +15,13 @@
       opacity: 0;
   }
 }
+
+@keyframes moving {
+  from {
+    left: -17px;
+  }
+  to {
+    left: -21px;
+  }
+}
+

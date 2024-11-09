@@ -13,8 +13,9 @@
     --font-weight-card-header: 700;
     --accent: #fff;
     --backdrop-color: #000;
-    --button-color-second: #fff;
     --button-mix-blend: #fff;
+    --text-shadow: #fff;
+    --main-color: #000;
 }
 
 :root.theme-dark {
@@ -35,7 +36,8 @@
     --backdrop-color: #000;
     --pseudo-element-color: #00cc14;
     --button-mix-blend: #00cc14;
-    --button-color-second: #00;
+    --text-shadow: #7a6d6d5e;
+    --main-color: #00cc14;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -53,6 +55,7 @@
         --font-weight-card: 465;
         --font-weight-card-header: 785;
         --accent: #00cc14;
-        --button-color-second: #00;
+        --text-shadow: #7a6d6d5e;
+        --main-color: #00cc14;
     }
 }
