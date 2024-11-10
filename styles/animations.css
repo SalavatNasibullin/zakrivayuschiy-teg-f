@@ -18,10 +18,9 @@
 
 @keyframes moving {
   from {
-    left: -17px;
+      left: -17px;
   }
   to {
-    left: -21px;
+      left: -21px;
   }
 }
-

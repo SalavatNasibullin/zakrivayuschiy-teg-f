@@ -115,15 +115,11 @@
 
 .theme-menu__button:disabled {
   opacity: 0.6;
-  transition: 0.3s;
-  transition-timing-function: ease;
   pointer-events: none;
 }
 
 .theme-menu__button:hover {
   opacity: 0.6;
-  transition: 0.3s;
-  transition-timing-function: ease;
 }
 
 .theme-menu__button:focus {
@@ -352,6 +348,7 @@
   background-color: var(--background-color);
   border: 2px solid var(--font-color);
   gap: 8px;
+  transition: box-shadow 0.3s ease;
 }
 
 .save-button__text {
@@ -364,7 +361,6 @@
 
 .button:focus-visible {
   box-shadow: 2px 2px var(--main-color);
-  transition: box-shadow 0.3s ease;
 }
 
 .button__text {
@@ -518,8 +514,8 @@
   }
 }
 
-.button-pseudo:hover::before {
-  transform: translateX(0%);
+.button:hover::before {
+  transform: scaleX(1);
 }
 
 @media (width <= 409px) {
